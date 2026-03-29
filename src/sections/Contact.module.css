@@ -1,0 +1,142 @@
+.section {
+  background: var(--dark);
+  border-top: 1px solid rgba(247, 243, 238, 0.07);
+  padding: 8rem 5vw;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 8rem;
+  align-items: start;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 238, 0.35);
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--soft);
+  margin-bottom: 2rem;
+}
+
+.heading em {
+  font-style: italic;
+  font-weight: 400;
+  color: rgba(247, 243, 238, 0.4);
+}
+
+.desc {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: rgba(247, 243, 238, 0.5);
+  font-weight: 400;
+  max-width: 420px;
+  margin-bottom: 2.5rem;
+}
+
+.desc strong {
+  color: rgba(247, 243, 238, 0.85);
+  font-weight: 600;
+}
+
+.desc em {
+  font-style: italic;
+  color: var(--terra);
+}
+
+/* Big email */
+.bigEmail {
+  display: inline-block;
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.75rem);
+  font-weight: 700;
+  color: var(--soft);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(247, 243, 238, 0.2);
+  padding-bottom: 0.4rem;
+  transition:
+    border-color 0.3s,
+    color 0.3s;
+}
+
+.bigEmail:hover {
+  border-color: var(--terra);
+  color: var(--terra);
+}
+
+/* Link list */
+.linkList {
+  border: 1px solid rgba(247, 243, 238, 0.1);
+  margin-top: 1.5rem;
+  overflow: hidden;
+}
+
+/* CSS-only hover — no JS layout reflow jank */
+.clink {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.6rem 1.75rem; /* bigger rows */
+  border-bottom: 1px solid rgba(247, 243, 238, 0.07);
+  text-decoration: none;
+  color: var(--soft);
+  transition:
+    background 0.25s ease,
+    padding-left 0.3s ease; /* CSS transition = smooth */
+  position: relative;
+}
+
+.clink:last-child {
+  border-bottom: none;
+}
+
+.clink:hover {
+  background: rgba(247, 243, 238, 0.05);
+  padding-left: 2.25rem; /* slide-in effect via CSS, not JS */
+}
+
+.clink:hover .clinkArrow {
+  color: var(--terra);
+}
+
+.clinkLabel {
+  font-size: 0.72rem; /* bigger than before */
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 238, 0.35);
+  margin-bottom: 0.35rem;
+  font-weight: 500;
+}
+
+.clinkValue {
+  font-size: 1rem; /* significantly bigger */
+  color: rgba(247, 243, 238, 0.75);
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.clinkArrow {
+  color: rgba(247, 243, 238, 0.2);
+  font-size: 1.35rem;
+  transition: color 0.25s;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+}

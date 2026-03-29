@@ -1,0 +1,36 @@
+.footer {
+  background: var(--dark);
+  padding: 2rem 5vw;
+  border-top: 1px solid rgba(247, 243, 238, 0.06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footer p,
+.footer span,
+.footer a {
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: rgba(247, 243, 238, 0.22);
+}
+
+.footer strong {
+  color: rgba(247, 243, 238, 0.45);
+  font-weight: 500;
+}
+
+.footer a {
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer a:hover {
+  color: var(--terra);
+}
+
+.center {
+  text-align: center;
+}

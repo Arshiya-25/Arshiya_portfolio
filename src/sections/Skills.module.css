@@ -1,0 +1,133 @@
+.section {
+  padding: 6rem 0;
+  background: var(--soft);
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.header {
+  padding: 0 5vw;
+  margin-bottom: 3.5rem;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+.heading em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+/* Rows */
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.rowWrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.row {
+  display: flex;
+  width: max-content;
+  gap: 0.75rem;
+}
+
+.rowLeft {
+  animation: scrollLeft 30s linear infinite;
+}
+.rowRight {
+  animation: scrollRight 34s linear infinite;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scrollRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Pills */
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.35rem;
+  border: 1px solid var(--border);
+  background: var(--white);
+  white-space: nowrap;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  transition:
+    border-color 0.2s,
+    background 0.2s,
+    color 0.2s;
+}
+
+.pill:hover {
+  border-color: var(--terra);
+  background: var(--terra-pale);
+  color: var(--terra);
+}
+
+.pillDark {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: var(--soft);
+}
+
+.pillDark:hover {
+  background: var(--terra);
+  border-color: var(--terra);
+  color: var(--white);
+}
+
+.pillDot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.pill:hover .pillDot {
+  background: var(--terra);
+}
+.pillDark .pillDot {
+  background: rgba(247, 243, 238, 0.2);
+}
+.pillDark:hover .pillDot {
+  background: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,41 @@
+.wrap {
+  background: var(--terra);
+  overflow: hidden;
+  padding: 0.8rem 0;
+  white-space: nowrap;
+}
+
+.track {
+  display: inline-flex;
+  gap: 0;
+  animation: ticker 30s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+.item {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 0 2rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 500;
+}
+
+.dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+}
+
+@keyframes ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}

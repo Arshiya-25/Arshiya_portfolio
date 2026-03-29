@@ -1,0 +1,263 @@
+.section {
+  padding: 8rem 5vw;
+  background: var(--white);
+  border-top: 1px solid var(--border);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.eyebrow {
+  display: block;
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.9rem;
+  font-weight: 500;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+}
+
+.heading em {
+  font-style: italic;
+  font-weight: 400;
+  color: #7a6f65;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+}
+
+.tab {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.65rem 1.5rem;
+  border: 1px solid var(--border);
+  background: none;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-weight: 400;
+  transition: all 0.2s;
+  cursor: none;
+  margin-right: -1px;
+}
+
+.tab:hover:not(.tabOn) {
+  border-color: var(--terra);
+  color: var(--terra);
+}
+
+.tabOn {
+  background: var(--dark);
+  border-color: var(--dark);
+  color: var(--soft);
+}
+
+/* Project list */
+.projList {
+  border-top: 1px solid var(--border);
+}
+
+.projRow {
+  display: grid;
+  grid-template-columns: 3rem 1fr auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.2rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--ink);
+  transition:
+    padding-left 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    background 0.2s;
+}
+
+.projRow:hover {
+  background: var(--soft);
+  border-radius: 2px;
+}
+
+.projRow:hover .projArrow {
+  color: var(--terra);
+  transform: translate(3px, -3px);
+}
+
+.projRow:hover .projNum {
+  color: var(--terra);
+}
+
+.projDisabled {
+  pointer-events: none;
+}
+
+.projNum {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--border);
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.projTitle {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.45rem;
+  line-height: 1.2;
+}
+
+.projMeta {
+  display: flex;
+  gap: 0.65rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.projStack {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+  font-weight: 500; /* was default 400, now punches through */
+}
+
+.badge {
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.65rem;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-weight: 600; /* heavier so it reads at small size */
+}
+
+.badgeGold {
+  border-color: #c8a96e;
+  color: #9a7840;
+  background: #fdfaf4;
+}
+
+.badgeWip {
+  border-color: var(--terra);
+  color: var(--terra);
+  background: var(--terra-pale);
+}
+
+.projArrow {
+  font-size: 1.2rem;
+  color: var(--border);
+  transition:
+    transform 0.3s,
+    color 0.2s;
+  display: block;
+}
+
+/* Design grid */
+.designGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.dcard {
+  background: var(--soft);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  display: block;
+  transition: box-shadow 0.35s;
+}
+
+.dcard:hover {
+  box-shadow: 0 20px 60px rgba(14, 12, 10, 0.1);
+}
+
+.dthumb {
+  height: 220px;
+  overflow: hidden;
+}
+
+.dImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dbody {
+  padding: 1.5rem;
+}
+
+.dtype {
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.dtitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+  line-height: 1.3;
+}
+
+.ddesc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.65;
+  font-weight: 400; /* was 300 */
+  margin-bottom: 1rem;
+}
+
+.dlink {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 2px;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+
+.dcard:hover .dlink {
+  border-color: var(--terra);
+  color: var(--terra);
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .designGrid {
+    grid-template-columns: 1fr;
+  }
+  .projRow {
+    grid-template-columns: 2.5rem 1fr;
+  }
+  .projArrow {
+    display: none;
+  }
+}

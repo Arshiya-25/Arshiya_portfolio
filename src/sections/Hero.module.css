@@ -1,0 +1,244 @@
+.hero {
+  min-height: 100vh;
+  background: var(--dark);
+  display: grid;
+  grid-template-rows: 1fr auto;
+  padding: 0 5vw;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgText {
+  position: absolute;
+  bottom: 4rem;
+  left: -0.02em;
+  font-family: var(--font-serif);
+  font-size: clamp(8rem, 18vw, 16rem);
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+  white-space: nowrap;
+  letter-spacing: -0.04em;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 10rem;
+  padding-bottom: 3rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 238, 0.4);
+  margin-bottom: 2.5rem;
+}
+
+.tagLine {
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--terra);
+}
+
+.statusDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--sage);
+  animation: blink 2s infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  color: var(--soft);
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.wordWrap {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 0.15em;
+}
+
+.wordWrap span {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* "and build" is italic terracotta */
+.title > span:nth-child(2) span {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--terra);
+}
+
+.bottomRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: end;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(247, 243, 238, 0.08);
+}
+
+.desc {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: rgba(247, 243, 238, 0.45);
+  font-weight: 300;
+  max-width: 440px;
+}
+
+.desc strong {
+  color: rgba(247, 243, 238, 0.85);
+  font-weight: 400;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1.75rem;
+}
+
+.stats {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.stat {
+  text-align: right;
+}
+
+.statN {
+  font-family: var(--font-serif);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--soft);
+  line-height: 1;
+}
+
+.statL {
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 238, 0.3);
+  margin-top: 0.3rem;
+}
+
+.cta {
+  display: inline-block;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: var(--terra);
+  color: white;
+  padding: 0.85rem 2.2rem;
+  transition:
+    background 0.25s,
+    transform 0.2s;
+}
+
+.cta:hover {
+  background: var(--soft);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+/* Bottom bar */
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(247, 243, 238, 0.07);
+}
+
+.bottomLeft {
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 238, 0.25);
+}
+
+.scrollHint {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(247, 243, 238, 0.25);
+}
+
+.scanLine {
+  width: 40px;
+  height: 1px;
+  background: rgba(247, 243, 238, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.scanLine::after {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--terra);
+  animation: scan 2.5s ease-in-out infinite 0.8s;
+}
+
+@keyframes scan {
+  0% {
+    left: -100%;
+  }
+  50% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .bottomRow {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .right {
+    align-items: flex-start;
+  }
+  .stats {
+    justify-content: flex-start;
+  }
+}
