@@ -90,12 +90,12 @@ export default function Hero() {
         {/* Bottom row */}
         <div className={styles.bottomRow}>
           <p ref={descRef} className={styles.desc} style={{ opacity: 0 }}>
-            Full Stack Developer · UI/UX Designer · Published Researcher.
+            Frontend Developer · UI/UX Designer
             <br />
             <br />
-            <strong>3rd year ECE at IGDTUW.</strong> I went from obsessing over
-            pixels to building the systems behind them. Completing React → full
-            stack after finishing the entire backend.
+            <strong>3rd year ECE at IGDTUW.</strong> Focused on building
+            thoughtful, well-crafted interfaces — where the small details do the
+            work.
           </p>
 
           <div ref={statsRef} className={styles.right} style={{ opacity: 0 }}>

@@ -1,21 +1,6 @@
 export const projects = [
   {
     id: "01",
-    title: "Maa & More — Maternal Health Platform",
-    stack: "React · TypeScript · HTML · CSS",
-    tags: ["Hackathon Build"],
-    tagType: "gold",
-    date: "Jun 2025",
-    description:
-      "Responsive maternal wellness platform with date-based pregnancy tracking, personalised weekly guidance, and context-aware health insights. Built with React + TypeScript at a group hackathon.",
-    links: {
-      live: "https://arshiya-25.github.io/maa_and_more/",
-      github: "https://github.com/Arshiya-25/maa_and_more",
-    },
-    color: "#fce8e8",
-  },
-  {
-    id: "02",
     title: "Expense Tracker Dashboard",
     stack: "JavaScript · Live Charts · CSV Export",
     tags: [],
@@ -28,6 +13,21 @@ export const projects = [
       github: "https://github.com/Arshiya-25/Expense-Tracker",
     },
     color: "#e8f0e8",
+  },
+  {
+    id: "02",
+    title: "Maa & More — Maternal Health Platform",
+    stack: "HTML · CSS · JavaScript",
+    tags: ["Hackathon Build"],
+    tagType: "gold",
+    date: "Jun 2025",
+    description:
+      "Responsive maternal wellness platform with date-based pregnancy tracking, personalised weekly guidance, and context-aware health insights. Built with React + TypeScript at a group hackathon.",
+    links: {
+      live: "https://arshiya-25.github.io/maa_and_more/",
+      github: "https://github.com/Arshiya-25/maa_and_more",
+    },
+    color: "#fce8e8",
   },
   {
     id: "03",
@@ -46,7 +46,7 @@ export const projects = [
   },
   {
     id: "04",
-    title: "Full Stack App — Coming Soon",
+    title: "Full Stack App",
     stack: "React · Node.js · Express.js · MongoDB · JWT",
     tags: ["In Progress"],
     tagType: "wip",
@@ -66,7 +66,7 @@ export const designProjects = [
     image: "/images/mindlink.png",
     bg: "#dce8f5",
     link: "https://www.figma.com/proto/DXGIM89LNJeceuXCQgd4YV/MindLink?node-id=2003-325&scaling=scale-down",
-    desc: "Designed an accessibility-first health app supporting memory, safety, and caregiver coordination.",
+    desc: "Designed an accessibility-first health app for patients with Alzheimer’s and dementia, simplifying memory support, safety tracking, and caregiver coordination.",
   },
   {
     title: "Laneige — Product Page Redesign",
@@ -89,7 +89,6 @@ export const designProjects = [
 export const skills = {
   row1: [
     "Node.js",
-    "Express.js",
     "MongoDB",
     "Mongoose",
     "JWT Auth",
@@ -99,7 +98,6 @@ export const skills = {
     "CSS3",
     "Tailwind CSS",
     "Node.js",
-    "Express.js",
     "MongoDB",
     "Mongoose",
     "JWT Auth",
@@ -186,14 +184,11 @@ export const experience = [
     org: "Centre of Excellence – AI, IGDTUW",
     date: "Jun 2024 – Jul 2024",
     bullets: [
-      "200+ customer profiles:  K-Means + GMM — reduced overlapping clusters from 6 to 3.",
-      "Applied SHAP & LIME to explain model behaviour to non-technical audiences.",
-      "Co-authored & published in Springer ICICC 2025, Vol. 5.",
+      "Processed structured mall customer data using K-Means and GMM, improving cluster separation from 6 to 3 segments.",
+      "Applied SHAP & LIME to interpret key behavioral patterns to non-technical audiences.",
+      "Co-authored & published “Enhanced Customer Segmentation: A Comparative Analysis” at ICICC 2025 (Springer).",
     ],
-    stats: [
-      { n: "200+", l: "Profiles" },
-      { n: "1", l: "Publication" },
-    ],
+    stats: [{ n: "1", l: "Publication" }],
     isLeadership: false,
   },
 ];
