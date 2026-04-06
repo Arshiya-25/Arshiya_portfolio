@@ -241,6 +241,30 @@
     color 0.2s;
 }
 
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.caseStudy {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  opacity: 0.7;
+  text-decoration: none;
+  transition:
+    opacity 0.2s,
+    color 0.2s;
+}
+
+.caseStudy:hover {
+  opacity: 1;
+  color: var(--terra);
+}
+
 .dcard:hover .dlink {
   border-color: var(--terra);
   color: var(--terra);

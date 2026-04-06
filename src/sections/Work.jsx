@@ -101,7 +101,22 @@ function DesignCard({ p, index }) {
         <div className={styles.dtype}>{p.type}</div>
         <div className={styles.dtitle}>{p.title}</div>
         <p className={styles.ddesc}>{p.desc}</p>
-        <span className={styles.dlink}>View Prototype ↗</span>
+
+        <div className={styles.links}>
+          <span className={styles.dlink}>View Prototype ↗</span>
+
+          {p.caseStudy && (
+            <a
+              href={p.caseStudy}
+              target="_blank"
+              rel="noreferrer"
+              className={styles.caseStudy}
+              onClick={(e) => e.stopPropagation()}
+            >
+              Read Case Study ↗
+            </a>
+          )}
+        </div>
       </div>
     </motion.a>
   );

@@ -66,6 +66,8 @@ export const designProjects = [
     image: "/images/mindlink.png",
     bg: "#dce8f5",
     link: "https://www.figma.com/proto/DXGIM89LNJeceuXCQgd4YV/MindLink?node-id=2003-325&scaling=scale-down",
+    caseStudy:
+      "https://www.figma.com/proto/DXGIM89LNJeceuXCQgd4YV/MindLink?node-id=2258-158&p=f&t=fUe4kitdD3kQpIOL-1&scaling=min-zoom&content-scaling=fixed&page-id=2240%3A36",
     desc: "Designed an accessibility-first health app for patients with Alzheimer’s and dementia, simplifying memory support, safety tracking, and caregiver coordination.",
   },
   {
