@@ -2,15 +2,15 @@ export const projects = [
   {
     id: "01",
     title: "Expense Tracker Dashboard",
-    stack: "JavaScript · Live Charts · CSV Export",
+    stack: "React · Node.js · Express.js · MongoDB",
     tags: [],
     tagType: "",
     date: "Dec 2025",
     description:
       "Real-time personal finance dashboard with dynamic monthly analytics, category-wise live charts, CSV export, and in-app notifications. Pure vanilla JS, zero dependencies.",
     links: {
-      live: "https://expense-tracker-omega-umber.vercel.app/",
-      github: "https://github.com/Arshiya-25/Expense-Tracker",
+      live: "expense-tracker-l173.vercel.app",
+      github: "https://github.com/Arshiya-25/Expense_Tracker",
     },
     color: "#e8f0e8",
   },
@@ -43,19 +43,6 @@ export const projects = [
       github: "https://github.com/Arshiya-25/customer_segmentation",
     },
     color: "#ede8f5",
-  },
-  {
-    id: "04",
-    title: "Full Stack App",
-    stack: "React · Node.js · Express.js · MongoDB · JWT",
-    tags: ["In Progress"],
-    tagType: "wip",
-    date: "2026",
-    description:
-      "Full stack application with JWT authentication, RESTful API, MongoDB with Mongoose, and a React frontend. Currently completing backend — frontend next.",
-    links: { live: null, github: null },
-    color: "#f5f0e8",
-    disabled: true,
   },
 ];
 
