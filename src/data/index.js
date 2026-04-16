@@ -9,7 +9,7 @@ export const projects = [
     description:
       "Real-time personal finance dashboard with dynamic monthly analytics, category-wise live charts, CSV export, and in-app notifications. Pure vanilla JS, zero dependencies.",
     links: {
-      live: "expense-tracker-l173.vercel.app",
+      live: "https://expense-tracker-l173.vercel.app",
       github: "https://github.com/Arshiya-25/Expense_Tracker",
     },
     color: "#e8f0e8",
